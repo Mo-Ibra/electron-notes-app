@@ -48,7 +48,7 @@ module.exports = {
       config: {
         repository: {
           owner: 'Mo-Ibra',
-          name: 'electron-note-app'
+          name: 'electron-notes-app'
         },
         prerelease: false,
         draft: true
