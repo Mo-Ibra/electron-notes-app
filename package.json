@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "dev": "electron .",
     "rebuild": "electron-rebuild",
     "start": "electron-forge start",
     "package": "electron-forge package",
