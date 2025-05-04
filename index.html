@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron Note Application</title>
+
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+    <div class="container mx-auto p-6">
+      <h1 class="text-2xl font-bold mb-4">Note-Taking App</h1>
+      <textarea
+        id="note-text"
+        class="w-full p-4 mb-4 border rounded-lg"
+        rows="6"
+      ></textarea>
+      <div>
+        <button
+          id="save-btn"
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg"
+        >
+          Save Note
+        </button>
+        <button
+          id="delete-btn"
+          class="bg-red-500 text-white px-4 py-2 rounded-lg ml-2"
+        >
+          Delete Notes
+        </button>
+      </div>
+      <div id="notes-list" class="mt-6">
+        <!-- Data will rendered here. -->
+      </div>
+    </div>
+
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
