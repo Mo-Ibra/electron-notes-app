@@ -63,6 +63,28 @@ function addNote(content) {
   db.write();
 }
 
+
+/**
+ * Updates an existing note in the database.
+ * @param {number} id - The id of the note to update.
+ * @param {string} newContent - The new content of the note.
+ */
+function updateNote(id, newContent) {
+  // Read the current state of the database from the JSON file
+  db.read();
+
+  // Find the note to update
+  const note = db.data.notes.find((note) => note.id === id);
+
+  // If the note exists, update its content
+  if (note) {
+    note.content = newContent;
+
+    // Write the updated data back to the JSON file
+    db.write();
+  }
+}
+
 /**
  * Deletes all notes from the database.
  */
@@ -77,4 +99,4 @@ function deleteAllNotes() {
   db.write();
 }
 
-module.exports = { getAllNotes, addNote, deleteAllNotes };
+module.exports = { getAllNotes, addNote, deleteAllNotes, updateNote };
