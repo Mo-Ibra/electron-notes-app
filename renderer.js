@@ -64,10 +64,9 @@ cancelEditBtn.addEventListener("click", () => {
   noteText.value = "";
 
   // Remove the background color from the selected note
-  const selectedNote = document.querySelectorAll(".bg-blue-100");
-  selectedNote.forEach((note) => {
-    note.classList.remove("bg-blue-100");
-  })
+  if (selectedNoteDiv) {
+    selectedNoteDiv.classList.remove("bg-blue-100");
+  }
 });
 
 deleteBtn.addEventListener("click", async () => {
