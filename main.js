@@ -46,3 +46,4 @@ app.on('window-all-closed', () => {
 ipcMain.handle('get-notes', () => db.getAllNotes())
 ipcMain.handle('add-note', (event, content) => db.addNote(content))
 ipcMain.handle('delete-notes', () => db.deleteAllNotes())
+ipcMain.handle('update-note', (event, id, content) => db.updateNote(id, content));

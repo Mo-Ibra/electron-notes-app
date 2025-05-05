@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Electron Note Application</title>
 
-
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
@@ -31,12 +30,17 @@
         >
           Delete Notes
         </button>
+        <button
+          id="cancel-edit-btn"
+          class="bg-gray-500 text-white px-4 py-2 rounded-lg ml-2 hidden"
+        >
+          Cancel Edit
+        </button>
       </div>
       <div id="notes-list" class="mt-6">
         <!-- Data will rendered here. -->
       </div>
     </div>
-
 
     <script src="./renderer.js"></script>
   </body>
